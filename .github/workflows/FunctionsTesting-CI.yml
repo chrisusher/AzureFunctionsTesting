@@ -36,7 +36,7 @@ jobs:
       run: dotnet build --no-restore --configuration ${{ env.BUILD_CONFIG }}
 
     - name: Run Tests
-      run: dotnet test --no-build --verbosity normal --logger trx --results-directory "TestResults"
+      run: dotnet test Functions.Tests.csproj --no-build --verbosity normal --logger trx --results-directory "TestResults"
       working-directory: Functions.Tests
 
     - name: Upload / Create Test Report
