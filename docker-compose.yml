@@ -1,0 +1,16 @@
+name: functions-testing
+
+services:
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    ports:
+      - 10000:10000
+      - 10001:10001
+      - 10002:10002
+    volumes:
+      - ./azurite_data:/data
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
