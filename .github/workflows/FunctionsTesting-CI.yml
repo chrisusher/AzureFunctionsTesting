@@ -9,6 +9,11 @@ on:
   
   workflow_dispatch:
 
+permissions:
+  contents: read
+  actions: read
+  checks: write
+
 env:
   BUILD_CONFIG: 'Release'
 
